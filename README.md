@@ -1,1 +1,17 @@
-Repo for CS260 Startup
+# Mastermind
+
+## Elevator Pitch:
+
+## Technologies:
+- HTML:
+- CSS:
+- JavaScript:
+- Service:
+- DB/Login
+- WebSocket
+- React
+
+
+## Key Features:
+
+## Design:
