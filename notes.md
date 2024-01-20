@@ -18,6 +18,7 @@
 - git pull
 
 
+
 ## Languages - Three Pillars of Web Development
 
 ### HTML
@@ -26,7 +27,6 @@
 - Tim Berners-Lee
 - Built the world's first server
 - Berners-Lee also made HTTP and URL
-
 
 ### CSS
 
@@ -39,6 +39,13 @@
 - Created by Brendan Eich
 - Created in about a week
 - JavaScript can basically be run everywhere
+
+
+
+## Server Setup
+
+IP Address: 54.242.124.222
+Domain: mastermind-online.click
 
 
 
