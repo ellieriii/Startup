@@ -77,5 +77,10 @@ IP Address: 54.242.124.222
 Domain: mastermind-online.click
 Key location: ~/OneDrive/Documents/CS_260/Keys/startup-key-pair.pem
 
+## Deploying
+
+Make sure that your files are in the same directory!!
+"$ ./deployFiles.sh -k ~/OneDrive/Documents/CS_260/Keys/startup-key-pair.pem -h mastermind-online.click -s startup"
+
 
 
