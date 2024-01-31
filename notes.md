@@ -18,6 +18,7 @@
 - git pull
 
 
+
 ## Languages - Three Pillars of Web Development
 
 ### HTML
@@ -26,7 +27,6 @@
 - Tim Berners-Lee
 - Built the world's first server
 - Berners-Lee also made HTTP and URL
-
 
 ### CSS
 
@@ -43,6 +43,7 @@
 
 ## THe Console
 
+<<<<<<< HEAD
 ### Commands:
 - echo - Output the parameters of the command
 - cd - Change directory
@@ -70,3 +71,12 @@
 - tracert - Trace the connections to a website
 - dig - Show the DNS information for a domain
 - man - Look up a command in the manual
+=======
+## Server Setup
+
+IP Address: 54.242.124.222
+Domain: mastermind-online.click
+
+
+
+>>>>>>> cbdf5f737bbb263323d927dd882ee832aa561ce1
