@@ -41,9 +41,8 @@
 - JavaScript can basically be run everywhere
 
 
-## THe Console
+## The Console
 
-<<<<<<< HEAD
 ### Commands:
 - echo - Output the parameters of the command
 - cd - Change directory
@@ -71,12 +70,12 @@
 - tracert - Trace the connections to a website
 - dig - Show the DNS information for a domain
 - man - Look up a command in the manual
-=======
+
 ## Server Setup
 
 IP Address: 54.242.124.222
 Domain: mastermind-online.click
+Key location: ~/OneDrive/Documents/CS_260/Keys/startup-key-pair.pem
 
 
 
->>>>>>> cbdf5f737bbb263323d927dd882ee832aa561ce1
