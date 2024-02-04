@@ -65,6 +65,10 @@
 - svg:	Scalable vector graphic content
 - iframe:	Inline frame of another HTML page
 
+#### How to
+Name your main HTML file "index.html"  
+
+
 ### CSS
 
 - Cascading Style Sheets
