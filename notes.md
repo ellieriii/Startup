@@ -1,32 +1,69 @@
 # CS 260 Notes
 
-## Git and GitHub
-### Create a Repository
+## Setup
+### Git and GitHub
+#### Create a Repository
 
 - Easiest to do directly through GitHub
 - git clone <url>
 
-### Making Changes
+#### Making Changes
 
 - Make sure to save the file
 - git add . or git add <filename>
 - git commit -am "message for change"
 - git push
 
-- git fetch (get information about latest changes without changing your local repository)
+- git fetch (get information about the latest changes without changing your local repository)
 - git status (shows if we are missing any commits)
 - git pull
 
 
 
-## Languages - Three Pillars of Web Development
+## Three Pillars of Web Development
 
 ### HTML
 
+#### History
 - Hypertext Markup Language
 - Tim Berners-Lee
 - Built the world's first server
 - Berners-Lee also made HTTP and URL
+
+#### Common Elements
+- html:	The page container
+- head:	Header information
+- title:	Title of the page
+- meta:	Metadata for the page such as character set or viewport settings
+- script:	JavaScript reference. Either a external reference, or inline
+- include:	External content reference
+- body:	The entire content body of the page
+- header:	Header of the main content
+- footer:	Footer of the main content
+- nav:	Navigational inputs
+- main:	Main content of the page
+- section:	A section of the main content
+- aside:	Aside content from the main content
+- div:	A block division of content
+- span:	An inline span of content
+- h<1-9>:	Text heading. From h1, the highest level, down to h9, the lowest level
+- p:	A paragraph of text
+- b:	Bring attention
+- table:	Table
+- tr:	Table row
+- th:	Table header
+- td:	Table data
+- ol,ul:	Ordered or unordered list
+- li:	List item
+- a:	Anchor the text to a hyperlink
+- img:	Graphical image reference
+- dialog:	Interactive component such as a confirmation
+- form:	A collection of user input
+- input:	User input field
+- audio:	Audio content
+- video:	Video content
+- svg:	Scalable vector graphic content
+- iframe:	Inline frame of another HTML page
 
 ### CSS
 
@@ -73,13 +110,13 @@
 
 ## Server Setup
 
-IP Address: 54.242.124.222
-Domain: mastermind-online.click
+IP Address: 54.242.124.222  
+Domain: mastermind-online.click  
 Key location: ~/OneDrive/Documents/CS_260/Keys/startup-key-pair.pem
 
 ## Deploying
 
-Make sure that your files are in the same directory!!
+Make sure that your files are in the same directory!!  
 "$ ./deployFiles.sh -k ~/OneDrive/Documents/CS_260/Keys/startup-key-pair.pem -h mastermind-online.click -s startup"
 
 
