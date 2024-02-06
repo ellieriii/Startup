@@ -30,6 +30,14 @@ Are you a fan of strategy, logic, and the sweet satisfaction of deduction? Maste
 - **WebSocket**: Pop-ups to notify the user if their chosen username has already been used, when they complete the game, or when they fail to crack the code in 10 tries. 
 - **Web Framework**: Using React web framework to add components
 
+## HTML Deliverable:
+- **HTML Pages**- HTML pages for "Home", "Instructions", "Play", and "Stats" with proper use of Body, Nav, Main, Header, and Footer tags. 
+- **Links**- Header has links to each page. Buttons link to consecutive pages (Create Account> Create Account> Play Mastermind)
+- **Text**- Textual description on the "Instructions" page of how to play the game.
+- **Images**- Image of the game board and code pegs that I created on NinjaMock. This is where the interactive game board will go.
+- **DB/Login**- Input boxes for Username and Password and submit button to create an account. Username will display on "Play" and "Stats" page. 
+- **WebSocket**- Placeholder for real-time data about other users starting games.
+
 
 
 
