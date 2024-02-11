@@ -7,6 +7,18 @@
 header, footer {
     background: #388697;
 }
+
+li {
+    color:#343633;
+    display: inline-flex;
+    text-align: left;
+}
+
 main {
     background: #c7c3c0;
+    color: #343633;
 }
+
+ header {
+    color : #c7c3c0;
+ }
