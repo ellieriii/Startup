@@ -4,21 +4,61 @@
 - gray (c7c3c0)
 - black (343633)
 - red (b10f2e) */
-header, footer {
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: 40px;
+    font-family: 'OCR A Std', serif;
+}
+
+
+ header h1 {
+    text-align: left;
     background: #388697;
+    color:#343633;
+    font-size: 50px;
+    padding: 0.5em;
+    padding-left: 0.5em;
+    margin: 0em;
+ }
+
+menu {
+    background: #c7c3c0;
+    text-align: left;
+    padding: 0em;
+    margin: 0em;
 }
 
 li {
     color:#343633;
     display: inline-flex;
-    text-align: left;
+    border-right: thin #343633 solid;
+    padding: 1.75em;
+    margin: 0;
+  
 }
 
 main {
-    background: #c7c3c0;
+    background: #388697;
     color: #343633;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center;
+    min-width: 10em;
+    font-size:20px;
 }
 
- header {
-    color : #c7c3c0;
- }
+main h1 {
+    font-weight:100;
+}
+
+footer {
+    background: #c7c3c0;
+    text-align: center;
+    padding: 1em;
+}
+
