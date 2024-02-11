@@ -94,6 +94,7 @@ main h1 {
 }
 
 .btn {
+    border-radius: 5px;
     font-family: OCR A Std;
     font-size: 20px;
     display: inline-flex;
@@ -112,6 +113,7 @@ main h1 {
 .btn::before {
     content: "";
     position: absolute;
+    border-radius: 5px;
     top:0;
     left:0;
     bottom:0;
