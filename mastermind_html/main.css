@@ -1,0 +1,12 @@
+/* Colors::
+- blue (388697)
+- light blue: (b3dfdf)
+- gray (c7c3c0)
+- black (343633)
+- red (b10f2e) */
+header, footer {
+    background: #388697;
+}
+main {
+    background: #c7c3c0;
+}
