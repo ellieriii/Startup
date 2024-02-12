@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+}
+
 .navbar {
     display:flex;
     justify-content:space-between;
@@ -60,7 +65,6 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     min-width: 40px;
     font-family: 'OCR A Std', serif;
 }
@@ -75,12 +79,27 @@ main {
     align-items: center;
     min-width: 10em;
     font-size:25px;
+    overflow: auto;
     
 }
 
-main h1 {
-    padding: 0.5em;
+main h2 {
+    padding-top: 3em;
+    padding-bottom: 1em;
     font-weight:100;
+    justify-items: center;
+}
+
+main, ol  {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 1em;
+    padding-left: 2.5em;
+}
+
+ol li {
+    padding: 0.5em;
 }
 
 
@@ -136,19 +155,17 @@ footer {
     
 }
 
-footer a {
+.repo-link, .repo-link a {
+    
     text-decoration: none;
     color: #e4dbd5;
-}
-
-.repo-link li {
     list-style: none;
     position: relative;
     margin: 0px 10px;
     padding: 0px 2px;
 }
 
-.repo-link li a::before {
+.repo-link a::before {
     content:"";
     position:absolute;
     bottom:0;
@@ -162,7 +179,7 @@ footer a {
     transition: transform 0.4s ease-in-out;
 }
 
-.repo-link li a:hover::before, .repo-link li a:focus::before{
+.repo-link a:hover::before, .repo-link li a:focus::before{
     transform:scaleX(1);
     transform-origin: bottom left;
 }
