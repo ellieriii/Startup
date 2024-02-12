@@ -72,20 +72,43 @@ body {
     font-family: 'OCR A Std', serif;
 }
 
+.fade-in, .login-options {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;
+    font-size: 10px;}
+    to {opacity: 1;
+    }
+}
+
 main {
     background: #c7c3c0;
     color: #343633;
     flex: 1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction:column;
     align-items: center;
     min-width: 10em;
-    font-size:30px;
+    font-size:2.2vw;
+    animation: pulse 4s infinite;
 }
+
+@keyframes pulse {
+    0%, 100% {
+      background-color: #c7c3c0;
+    }
+    50% {
+      background-color: #bbcece;
+    }
+  }
 
 main h1 {
     font-weight:100;
+    flex-wrap: wrap;
 }
 
 .login-options li {
