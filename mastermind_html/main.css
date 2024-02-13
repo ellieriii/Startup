@@ -11,6 +11,7 @@
     box-sizing: border-box;
 }
 
+
 .navbar {
     display:flex;
     justify-content:space-between;
@@ -72,9 +73,15 @@ body {
     font-family: 'OCR A Std', serif;
 }
 
-.fade-in, .login-options {
+.fade-in {
+    animation: fadeIn 3s, animate 2.5s infinite alternate;
+    /* text-shadow: 0 0 40px #343633; */
+}
+
+.login-options{
     animation: fadeIn 3s;
 }
+
 
 @keyframes fadeIn {
     from {opacity: 0;
@@ -83,8 +90,26 @@ body {
     }
 }
 
+@keyframes animate {
+    40%{
+        opacity:1;
+    }
+    42%{
+        opacity:0.8;
+    }
+    43%{
+        opacity:1;
+    }
+    45%{
+        opacity: 0.3;
+    }
+    46%{
+        opacity:1;
+    }
+}
+
 main {
-    background: #c7c3c0;
+    background: radial-gradient(#c7c3c0 50%, #a0a6a8, #7b8183);
     color: #343633;
     flex: 1;
     display: flex;
@@ -94,7 +119,6 @@ main {
     align-items: center;
     min-width: 10em;
     font-size:2.2vw;
-    animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
@@ -102,13 +126,14 @@ main {
       background-color: #c7c3c0;
     }
     50% {
-      background-color: #bbcece;
+      background-color: #9ccaca;
     }
   }
 
 main h1 {
     font-weight:100;
     flex-wrap: wrap;
+    animation: animate 1.6s infinite alternate;
 }
 
 .login-options li {
