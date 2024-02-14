@@ -14,7 +14,7 @@
 }
 
 .navbar .title {
-    color: #343633;
+    color: #161718;
     font-size: 35px;
     font-weight: bold;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 main {
-    background: #c7c3c0;
+    background: radial-gradient(#e6e3e1 50%, #c6c8c9, #aeb0b1);
     color: #343633;
     flex: 1;
     display: flex;
@@ -80,8 +80,8 @@ main {
 }
 
 main > div, ul {
-    margin-right: 3em;
-    margin-left: 3em;
+    margin-right: 4em;
+    
 }
 
 
@@ -90,7 +90,7 @@ ul {
     max-width: 300px;
 }
 
-li{
+li {
     font-size: 20px;
     padding: 1em;
 }
