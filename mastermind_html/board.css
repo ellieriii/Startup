@@ -24,6 +24,16 @@
     width:30px;
     border-radius:50%;
     border: thin black solid;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer;
+}
+
+.cp-slot:hover {
+    background:linear-gradient(to top right, rgb(66, 65, 65), rgb(146, 143, 143));
+}
+
+.cp-slot:active {
+    background:linear-gradient(to top right, gray, white);
 }
 
 .kp-slot {
@@ -68,6 +78,16 @@
     height:30px;
     width:30px;
     border-radius:50%;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer;
+}
+
+.red-peg:hover {
+    background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159));
+}
+
+.red-peg:active {
+    background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159));
 }
 
 .green-peg {
@@ -76,6 +96,16 @@
     height:30px;
     width:30px;
     border-radius:50%;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer;
+}
+
+.green-peg:hover {
+    background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160));
+}
+
+.green-peg:active {
+    background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160));
 }
 
 .yellow-peg {
@@ -84,7 +114,18 @@
     height:30px;
     width:30px;
     border-radius:50%;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer;
 }
+
+.yellow-peg:hover {
+    background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188));
+}
+
+.yellow-peg:active {
+    background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188));
+}
+
 
 .blue-peg {
     background:linear-gradient(to top right, blue, rgb(121, 121, 168));
@@ -92,7 +133,18 @@
     height:30px;
     width:30px;
     border-radius:50%;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer;
 }
+
+.blue-peg:hover {
+    background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221));
+}
+
+.blue-peg:active {
+    background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221));
+}
+
 
 .black-peg {
     background:linear-gradient(to top right, black, rgb(112, 111, 111));
@@ -100,18 +152,41 @@
     height:30px;
     width:30px;
     border-radius:50%;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer;
 }
 
+.black-peg:hover {
+    background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179));
+}
+
+.black-peg:active {
+    background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179));
+}
+
+
 .white-peg {
-    background:linear-gradient(to top right, rgb(126, 125, 125), white);
+    background:linear-gradient(to top right, rgb(97, 96, 96), white);
     border: thin black solid;
     height:30px;
     width:30px;
     border-radius:50%;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    cursor: pointer;
 }
+
+.white-peg:hover {
+    background:linear-gradient(to top right, rgb(167, 165, 165), white);
+}
+
+.white-peg:active {
+    background:linear-gradient(to top right, rgb(167, 165, 165), white);
+}
+
 
 .dock-row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
 }

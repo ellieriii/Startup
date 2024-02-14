@@ -79,15 +79,21 @@ main {
     
 }
 
-main > div {
-    margin: 2em;
+main > div, ul {
+    margin-right: 3em;
+    margin-left: 3em;
 }
 
-main h1 {
-    padding: 0.5em;
-    font-weight:100;
+
+ul {
+    list-style: none;
+    max-width: 300px;
 }
 
+li{
+    font-size: 20px;
+    padding: 1em;
+}
 
 
 
