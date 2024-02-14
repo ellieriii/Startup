@@ -22,9 +22,10 @@
 }
 
 .navbar .title {
-    color: #343633;
+    color: #161718;
     font-size: 35px;
     font-weight: bold;
+    /* text-shadow: 0px 2px 0px rgb(195, 216, 223); */
 }
 
 .navbar menu {
@@ -109,7 +110,7 @@ body {
 }
 
 main {
-    background: radial-gradient(#c7c3c0 50%, #a0a6a8, #7b8183);
+    background: radial-gradient(#e6e3e1 50%, #c6c8c9, #aeb0b1);
     color: #343633;
     flex: 1;
     display: flex;
