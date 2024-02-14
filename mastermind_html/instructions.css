@@ -13,7 +13,7 @@ header {
     display:flex;
     justify-content:space-between;
     align-items: center;
-    background-color: #388697;
+    background-color: #57AEC1;
     padding: 18px 60px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
@@ -130,7 +130,7 @@ ol li {
     outline:none;
     position:relative;
     cursor:pointer;
-    --accent-color: #388697;
+    --accent-color: #57AEC1;
 }
 
 .btn::before {
@@ -162,7 +162,7 @@ footer {
     display:flex;
     justify-content:center;
     align-items: center;
-    background-color: #388697;
+    background-color: #57AEC1;
     padding: 18px 60px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     
