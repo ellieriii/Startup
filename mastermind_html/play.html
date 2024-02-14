@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <link rel="stylesheet" href="play.css" />
-<link rel="stylesheet" hreh=""
+<link rel="stylesheet" href="board.css" />
 
 
 <head>
@@ -37,9 +37,153 @@
     </ul>
     <hr>
     <h3>{Username}'s Game</h2> -->
-    <img alt="Board" src="Empty_mastermind_board.png" width="300" &nbsp>
-    <img alt="Dock" src="code_pegs_dock.png" width="200">
+    <!-- <img alt="Board" src="Empty_mastermind_board.png" width="300" &nbsp>
+    <img alt="Dock" src="code_pegs_dock.png" width="200"> -->
     <div class="board">
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cp-row">
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="cp-slot"></div>
+        <div class="kp-square">
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+          <div class="kp-row">
+            <div class="kp-slot"></div>
+            <div class="kp-slot"></div>
+          </div>
+        </div>
+      </div>
       <div class="cp-row">
         <div class="cp-slot"></div>
         <div class="cp-slot"></div>
@@ -58,7 +202,19 @@
       </div>
     </div>
   
-    <div class="dock"></div>
+    <div class="dock">
+      <div class="dock-row">
+        <div class="red-peg"></div>
+        <div class="green-peg"></div>
+        <div class="yellow-peg"></div>
+      </div>
+      <div class = "dock-row">
+        <div class="blue-peg"></div>
+        <div class="black-peg"></div>
+        <div class="white-peg"></div>
+      </div>
+      
+    </div>
   </main>
 
   <footer>

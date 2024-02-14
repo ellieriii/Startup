@@ -72,10 +72,15 @@ main {
     display: flex;
     justify-content: center;
     flex-direction:row;
+    justify-content: center;
     align-items: center;
     min-width: 10em;
     font-size:25px;
     
+}
+
+main > div {
+    margin: 2em;
 }
 
 main h1 {
@@ -83,20 +88,6 @@ main h1 {
     font-weight:100;
 }
 
-
-.board{
-    background: blue;
-    width: 300px;
-    height: 530px;
-    border-radius:4%;
-}
-
-.dock {
-    background:red;
-    width:200px;
-    height:132px;
-    border-radius:4%;
-}
 
 
 
