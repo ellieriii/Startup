@@ -15,13 +15,22 @@
 
     <!-- Navigation elements -->
     <nav class = "navbar">
-      <div class="title">MASTERMIND<sup>&reg;</sup></div>
+      <div class="title"><a href="index.html">MASTERMIND<sup>&reg;</sup></a></div>
       <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
       <menu>
-        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="index.html">Home</a></li> -->
+        <li class="dropdown"> Log In &#9660
+          <ul class="content">
+            <li><a href="create_account.html">Create Account</a></li>
+            <li><a href="login.html">Log In</a></li>
+          </ul>
+        </li>
         <li><a href="instructions.html">Instructions</a></li>
         <li><a href="play.html">Play</a></li>
         <li><a href="stats.html">Stats</a></li>
+        
+
+        
       </menu>
     </nav>
 

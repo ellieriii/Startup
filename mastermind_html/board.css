@@ -128,7 +128,7 @@
 
 
 .blue-peg {
-    background:linear-gradient(to top right, blue, rgb(121, 121, 168));
+    background:linear-gradient(to top right, rgb(0, 0, 195), rgb(121, 121, 168));
     border: thin black solid;
     height:30px;
     width:30px;
