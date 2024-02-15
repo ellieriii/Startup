@@ -38,6 +38,20 @@ Are you a fan of strategy, logic, and the sweet satisfaction of deduction? Maste
 - **DB/Login**- Input boxes for Username and Password and submit button to create an account. Username will display on "Play" and "Stats" page. 
 - **WebSocket**- Placeholder for real-time data about other users starting games.
 
+## CSS DEliverable:
+- 30% (done) Header, footer, and main content body
+    - Header and footer remain the same across all pages, main changes based on page content
+- 20% (done) Navigation elements
+    - Styled navigation bar with links to all pages
+- 10% (partial) Responsive to window resizing
+    - All pages except 'Instructions' are entirely responsive. Scroll element on "Instructions" is making responsiveness difficult
+- 20% (done) Application elements
+    - Interactive game board on "Play" page
+- 10% (done) Application text content
+    - Text on the "instructions" page
+- 10% (done) Application images
+    - Images of example games on "Instructions" page
+
 
 
 

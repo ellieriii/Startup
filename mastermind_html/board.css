@@ -183,6 +183,13 @@
     background:linear-gradient(to top right, rgb(167, 165, 165), white);
 }
 
+.red-kp {
+    background: linear-gradient(to top right, red, pink)
+}
+
+.white-kp {
+    background: linear-gradient(to top right, gray, white)
+}
 
 .dock-row {
     display: flex;

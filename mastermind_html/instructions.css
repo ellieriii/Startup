@@ -11,12 +11,14 @@ main {
     overflow: auto;
     padding-left: 8%;
     padding-right: 8%;
+    padding-top:50%;
     padding-bottom: 2.5%;
+    height: 100vh;
     
 }
 
 main h2 {
-    padding-top:30%;
+    padding-top: 10%;
     padding-bottom: 3%;
     font-weight:100;
     justify-items: center;
@@ -44,4 +46,17 @@ ol li {
     margin: auto;
 }
 
+.example {
+    padding:5%;
+}
 
+.example >*{
+    padding: 2%;
+}
+
+img {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
