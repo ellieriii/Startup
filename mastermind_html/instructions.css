@@ -1,3 +1,6 @@
+
+
+
 main {
     background: radial-gradient(#e6e3e1 50%, #c6c8c9, #aeb0b1);
     color: #343633;
@@ -6,57 +9,52 @@ main {
     justify-content: center;
     flex-direction:column;
     align-items: center;
-    min-width: 10em;
-    font-size:25px;
-    overflow: auto;
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-top:50%;
-    padding-bottom: 2.5%;
-    height: 100vh;
-    
+    font-size:25px; 
 }
 
 main h2 {
-    margin-top: 10%;
+    margin-top: 50px;
     padding-bottom: 3%;
     font-weight:100;
     justify-items: center;
 }
 
-main, ol  {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    
+
+.line,
+.example {
+    margin-right: 3em;
+    margin-left:3em;
 }
+
 ol {
-    padding: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
-
-}
-
-ol li {
-    padding: 0.5em;
-}
-
-.line {
-    text-align: center;
-    margin: auto;
+    margin-left:5em;
+    margin-right:5em;
 }
 
 .example {
-    padding:5%;
+    margin:20px;
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: thin black solid;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px;
 }
 
-.example >*{
-    padding: 2%;
+.example > * {
+    padding: 10px;
+    max-width: 800px;
+}
+
+.btn {
+    margin: 30px;
 }
 
 img {
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
+
+
+

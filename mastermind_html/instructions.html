@@ -11,14 +11,11 @@
 </head>
 
 <header>
-    <!-- <h1>MASTERMIND<sup>&reg;</sup></h1> -->
-
-    <!-- Navigation elements -->
+  
     <nav class = "navbar">
       <div class="title"><a href="index.html">MASTERMIND<sup>&reg;</sup></a></div>
-      <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
+
       <menu>
-        <!-- <li><a href="index.html">Home</a></li> -->
         <li class="dropdown"> Log In
           <ul class="content">
             <li><a href="create_account.html">Create Account</a></li>
@@ -28,41 +25,39 @@
         <li><a href="instructions.html">Instructions</a></li>
         <li><a href="play.html">Play</a></li>
         <li><a href="stats.html">Stats</a></li>
-        
-
-        
+      
       </menu>
     </nav>
 
-    <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-  
   </header>
 
   <main>
     <h2>How to Play Mastermind</h2>
 
     <p>
-      <div class=line">Solve the hidden code in under 10 guesses and claim the title of Mastermind!</div><br>
-      <div class=line">You, the Codebreaker will place four code pegs into the first row of holes, attempting to duplicate the exact colors and positions of the secret code. </div><br>
-      <div class=line">Then, red and white key pegs will be placed next to your guess as clues to guide you toward the secret code.</div>
+      <div class="line">Solve the hidden code in under 10 guesses and claim the title of Mastermind!</div><br>
+      <div class="line">You, the Codebreaker will place four code pegs into the first row of holes, attempting to duplicate the exact colors and positions of the secret code. </div><br>
+      <div class="line">Then, red and white key pegs will be placed next to your guess as clues to guide you toward the secret code.</div> <br>
       <ol>
-        <li> A red key peg for each code peg that's the right color and in the right position</li>
-        <li> A white key peg for each code peg that's the right color, but not in the right position</li>
-        <li>No key pegs indicate a color is not used in the code</li>
-      </ol>
-      <div class=line">The key pegs will not be given in any particular order. It's part of the challenge for the Codebreaker to figure out which key pegs correspond to which code pegs.</div> <br>
-      <div class=line">The Codebreaker should remember that one key peg corresponds to one code peg, and a red key peg takes precedence over a white one. </div>
+        <li class="line"> A red key peg for each code peg that's the right color and in the right position</li>
+        <li class = "line"> A white key peg for each code peg that's the right color, but not in the right position</li>
+        <li class = "line">No key pegs indicate a color is not used in the code</li>
+      </ol><br>
+      <div class="line">The key pegs will not be given in any particular order. It's part of the challenge for the Codebreaker to figure out which key pegs correspond to which code pegs.</div> <br>
+      <div class="line">The Codebreaker should remember that one key peg corresponds to one code peg, and a red key peg takes precedence over a white one. </div><br>
     </p>
-    <br>
-    <div class="example">
-      <p>Example:</p>
-        <img alt="example code" src="example code row.png" width="500">
-        In this example, the red and white key pegs reveal that the guess contains two code pegs that are the correct color and in the correct position and one code peg that is present in the hidden code, but it is not positioned correctly. </p>
-        The hidden code in this scenario could be: 
-        <img alt="example hidden code" src="example_hidden_code.png" width="500">
-      
-    </div>
     
+      <div class="example">
+        <p class="ex-title">Example:</p><br>
+
+        <img alt="example code" src="example code row.png" width="500"><br>
+        <p>In this example, the red and white key pegs reveal that the guess contains two code pegs that are the correct color and in the correct position and one code peg that is present in the hidden code, but it is not positioned correctly. </p><br>
+
+        <p>The hidden code in this scenario could be:</p> <br>
+        <img alt="example hidden code" src="example_hidden_code.png" width="500">
+      </div>
+    
+
     <form method="get" action="play.html">
       <button class = "btn" type="submit">Play Mastermind</button>
     </form>

@@ -6,7 +6,6 @@ main {
     justify-content: center;
     flex-direction:column;
     align-items: center;
-    min-width: 10em;
     font-size:25px;
     
 }
@@ -16,6 +15,18 @@ main h1 {
     font-weight:100;
 }
 
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form .un, form .pass {
+    padding: 10px;
+}
+
+
 .btn {
-    margin: 2em;
+    margin: 20px;
 }
