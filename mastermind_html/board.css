@@ -72,7 +72,7 @@
     box-shadow: 10px 10px 30px;
 }
 
-.red-peg {
+.red {
     background:linear-gradient(to top right, red, rgb(168, 121, 121));
     border: thin black solid;
     height:30px;
@@ -82,15 +82,15 @@
     cursor: pointer;
 }
 
-.red-peg:hover {
+.red:hover {
     background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159));
 }
 
-.red-peg:active {
+.red:active {
     background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159));
 }
 
-.green-peg {
+.green {
     background:linear-gradient(to top right, rgb(5, 107, 5), rgb(121, 168, 121));
     border: thin black solid;
     height:30px;
@@ -100,15 +100,15 @@
     cursor: pointer;
 }
 
-.green-peg:hover {
+.green:hover {
     background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160));
 }
 
-.green-peg:active {
+.green:active {
     background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160));
 }
 
-.yellow-peg {
+.yellow {
     background:linear-gradient(to top right, rgb(168, 168, 16), rgb(240, 240, 169));
     border: thin black solid;
     height:30px;
@@ -118,16 +118,16 @@
     cursor: pointer;
 }
 
-.yellow-peg:hover {
+.yellow:hover {
     background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188));
 }
 
-.yellow-peg:active {
+.yellow:active {
     background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188));
 }
 
 
-.blue-peg {
+.blue {
     background:linear-gradient(to top right, rgb(0, 0, 195), rgb(121, 121, 168));
     border: thin black solid;
     height:30px;
@@ -137,16 +137,16 @@
     cursor: pointer;
 }
 
-.blue-peg:hover {
+.blue:hover {
     background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221));
 }
 
-.blue-peg:active {
+.blue:active {
     background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221));
 }
 
 
-.black-peg {
+.black {
     background:linear-gradient(to top right, black, rgb(112, 111, 111));
     border: thin black solid;
     height:30px;
@@ -156,16 +156,16 @@
     cursor: pointer;
 }
 
-.black-peg:hover {
+.black:hover {
     background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179));
 }
 
-.black-peg:active {
+.black:active {
     background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179));
 }
 
 
-.white-peg {
+.white {
     background:linear-gradient(to top right, rgb(97, 96, 96), white);
     border: thin black solid;
     height:30px;
@@ -175,11 +175,11 @@
     cursor: pointer;
 }
 
-.white-peg:hover {
+.white:hover {
     background:linear-gradient(to top right, rgb(167, 165, 165), white);
 }
 
-.white-peg:active {
+.white:active {
     background:linear-gradient(to top right, rgb(167, 165, 165), white);
 }
 
