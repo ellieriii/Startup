@@ -27,3 +27,9 @@ li {
     font-size: 20px;
     padding: 1em;
 }
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}

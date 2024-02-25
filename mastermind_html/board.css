@@ -27,13 +27,6 @@
     cursor: pointer;
 }
 
-.cp-slot:hover {
-    background:linear-gradient(to top right, rgb(66, 65, 65), rgb(146, 143, 143));
-}
-
-.cp-slot:active {
-    background:linear-gradient(to top right, rgb(66, 65, 65), rgb(146, 143, 143));
-}
 
 .kp-slot {
     background:linear-gradient(to top right, black, gray);

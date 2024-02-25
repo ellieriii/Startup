@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    let slotDefault = "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(66, 65, 65), rgb(146, 143, 143)) repeat scroll 0% 0% / auto padding-box border-box";
+    let slotDefault = "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(53, 50, 50), rgb(128, 128, 128)) repeat scroll 0% 0% / auto padding-box border-box";
 
     let selectedColor = '';
 
