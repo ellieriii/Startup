@@ -1,33 +1,48 @@
-function generateSecretCode() {
-    const colors = ["red", 'green', 'yellow', 'blue', 'black', 'white'];
-    let secretCode = [];
-    for (let i = 0; i < 4; i++) {
-        const randomIndex = Math.floor(Math.random() * colors.length);
-        secretCode.push(colors[randomIndex])
-    }
-}
+$(document).ready(function() {
 
-let secretCode = generateSecretCode();
-console.log(secretCode)
-let attempts = 0;
+    let selectedColor = '';
 
-let selectedColor;
-let selectedSlot;
+    $(".peg").click(function() {
+        // let peg = ($(this).parent())[0];
+        selectedColor = $(this).css("background");
+        $(this).css("background", selectedColor);
+        console.log(selectedColor)
+    });
 
-function selectColor(color){
-    selectedColor = color;
+});
 
-    if (selectedSlot) {
-        updateSlotColor(selectedSlot, selectedColor);
-        selectedSlot = null;
-    }
-}
 
-function selectSlot(slotIndex) {
-    selectedSlot = slotIndex;
-}
 
-function updateSlotColor(slotIndex, color) {
-    const slot = document.getElementById('try-${attempts}-${slotIndex}');
-    slot.style.backgroundColor = color;
-}
+// generateSecretCode() {
+//     const colors = ["red", 'green', 'yellow', 'blue', 'black', 'white'];
+//     let secretCode = [];
+//     for (let i = 0; i < 4; i++) {
+//         const randomIndex = Math.floor(Math.random() * colors.length);
+//         secretCode.push(colors[randomIndex])
+//     }
+// }
+
+// let secretCode = generateSecretCode();
+// console.log(secretCode)
+// let attempts = 0;
+
+// let selectedColor;
+// let selectedSlot;
+
+// function selectColor(color){
+//     selectedColor = color;
+
+//     if (selectedSlot) {
+//         updateSlotColor(selectedSlot, selectedColor);
+//         selectedSlot = null;
+//     }
+// }
+
+// function selectSlot(slotIndex) {
+//     selectedSlot = slotIndex;
+// }
+
+// function updateSlotColor(slotIndex, color) {
+//     const slot = document.getElementById('try-${attempts}-${slotIndex}');
+//     slot.style.backgroundColor = color;
+// }
