@@ -219,3 +219,13 @@
     background: rgb(106, 106, 107);
     border: none;
 }
+
+.middle {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle > div {
+    margin: 1em;
+}
+
