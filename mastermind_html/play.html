@@ -233,14 +233,14 @@
   
     <div class="dock">
       <div class="dock-row">
-        <div class="peg red"></div>
-        <div class="peg green"></div>
-        <div class="peg yellow"></div>
+        <div class="peg red" onclick="selectColor('red')"></div>
+        <div class="peg green" onclick="selectColor('green')"></div>
+        <div class="peg yellow" onclick="selectColor('yellow')"></div>
       </div>
       <div class = "dock-row">
-        <div class="peg blue"></div>
-        <div class="peg black"></div>
-        <div class="peg white"></div>
+        <div class="peg blue" onclick="selectColor('blue')"></div>
+        <div class="peg black" onclick="selectColor('black')"></div>
+        <div class="peg white" onclick="selectColor('white')"></div>
       </div>
       
     </div>
@@ -252,5 +252,6 @@
     </div>
   </footer>
 </body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 <script src = "board.js"></script>
 </html>
