@@ -1,6 +1,18 @@
 $(document).ready(function() {
 
+    let slotDefault = "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(66, 65, 65), rgb(146, 143, 143)) repeat scroll 0% 0% / auto padding-box border-box";
+
     let selectedColor = '';
+
+    let guess = 0
+
+    let tempArray =  $(".cp-row");
+    let guessArray = [];
+    for(let i = 10; i >= 0; i--) {
+        guessArray.push(tempArray[i]);
+    }
+    
+    
 
     $(".peg").click(function() {
 
@@ -12,23 +24,30 @@ $(document).ready(function() {
         console.log(selectedColor)
         
     });
+    
+    $(".cp-slot").click(function() {
+        if ($(this).css("background") == slotDefault) {
+            $(this).css("background", selectedColor);
+        }
+        else if ($(this).css("background") !== slotDefault) {
+            $(this).css("background", slotDefault);
+        }
+    });
 
 });
 
-
-
-// generateSecretCode() {
+// function generateSecretCode() {
 //     const colors = ["red", 'green', 'yellow', 'blue', 'black', 'white'];
 //     let secretCode = [];
 //     for (let i = 0; i < 4; i++) {
 //         const randomIndex = Math.floor(Math.random() * colors.length);
 //         secretCode.push(colors[randomIndex])
 //     }
+//     console.log(secretCode)
 // }
 
-// let secretCode = generateSecretCode();
-// console.log(secretCode)
-// let attempts = 0;
+
+
 
 // let selectedColor;
 // let selectedSlot;
