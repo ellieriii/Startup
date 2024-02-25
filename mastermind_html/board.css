@@ -1,3 +1,12 @@
+:root {
+    --redg:  linear-gradient(to top right, red, rgb(168, 121, 121));
+    --greeng: linear-gradient(to top right, rgb(5, 107, 5), rgb(121, 168, 121));
+    --yellowg: linear-gradient(to top right, rgb(168, 168, 16), rgb(240, 240, 169));
+    --blueg: linear-gradient(to top right, rgb(0, 0, 195), rgb(121, 121, 168));
+    --blackg: linear-gradient(to top right, black, rgb(112, 111, 111));
+    --whiteg: linear-gradient(to top right, rgb(97, 96, 96), white);
+}   
+
 
 .board {
     background: rgb(106, 106, 107);
@@ -66,7 +75,7 @@
 }
 
 .red {
-    background:linear-gradient(to top right, red, rgb(168, 121, 121));
+    background: var(--redg);
     border: thin black solid;
     height:30px;
     width:30px;
@@ -86,7 +95,7 @@
 }
 
 .green {
-    background:linear-gradient(to top right, rgb(5, 107, 5), rgb(121, 168, 121));
+    background:var(--greeng);
     border: thin black solid;
     height:30px;
     width:30px;
@@ -106,7 +115,7 @@
 }
 
 .yellow {
-    background:linear-gradient(to top right, rgb(168, 168, 16), rgb(240, 240, 169));
+    background:var(--yellowg);
     border: thin black solid;
     height:30px;
     width:30px;
@@ -127,7 +136,7 @@
 
 
 .blue {
-    background:linear-gradient(to top right, rgb(0, 0, 195), rgb(121, 121, 168));
+    background:var(--blueg);
     border: thin black solid;
     height:30px;
     width:30px;
@@ -148,7 +157,7 @@
 
 
 .black {
-    background:linear-gradient(to top right, black, rgb(112, 111, 111));
+    background:var(--blackg);
     border: thin black solid;
     height:30px;
     width:30px;
@@ -170,7 +179,7 @@
 
 
 .white {
-    background:linear-gradient(to top right, rgb(97, 96, 96), white);
+    background:var(--whiteg);
     border: thin black solid;
     height:30px;
     width:30px;
