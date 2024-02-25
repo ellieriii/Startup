@@ -83,11 +83,13 @@
 }
 
 .red:hover {
-    background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159));
+    /* background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159)); */
+    border: thick black solid;
 }
 
 .red:active {
-    background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159));
+    /* background:linear-gradient(to top right, rgb(199, 84, 84), rgb(238, 159, 159)); */
+    border: thick black solid;
 }
 
 .green {
@@ -101,11 +103,13 @@
 }
 
 .green:hover {
-    background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160));
+    /* background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160)); */
+    border: thick black solid;
 }
 
 .green:active {
-    background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160));
+    /* background:linear-gradient(to top right, rgb(49, 141, 49), rgb(160, 216, 160)); */
+    border: thick black solid;
 }
 
 .yellow {
@@ -119,11 +123,13 @@
 }
 
 .yellow:hover {
-    background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188));
+    /* background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188)); */
+    border: thick black solid;
 }
 
 .yellow:active {
-    background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188));
+    /* background:linear-gradient(to top right, rgb(218, 218, 98), rgb(236, 236, 188)); */
+    border: thick black solid;
 }
 
 
@@ -138,11 +144,13 @@
 }
 
 .blue:hover {
-    background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221));
+    /* background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221)); */
+    border: thick black solid;
 }
 
 .blue:active {
-    background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221));
+    /* background:linear-gradient(to top right, rgb(80, 80, 211), rgb(169, 169, 221)); */
+    border: thick black solid;
 }
 
 
@@ -157,11 +165,14 @@
 }
 
 .black:hover {
-    background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179));
+    border: thick black solid;
+    /* background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179));
+    } */
 }
 
 .black:active {
-    background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179));
+    /* background:linear-gradient(to top right, rgb(66, 63, 63), rgb(182, 179, 179)); */
+    border: thick black solid;
 }
 
 
@@ -176,11 +187,13 @@
 }
 
 .white:hover {
-    background:linear-gradient(to top right, rgb(167, 165, 165), white);
-}
+    /* background:linear-gradient(to top right, rgb(167, 165, 165), white); */
+    border: thick black solid;
+}   
 
 .white:active {
-    background:linear-gradient(to top right, rgb(167, 165, 165), white);
+    /* background:linear-gradient(to top right, rgb(167, 165, 165), white); */
+    border: thick black solid;
 }
 
 .red-kp {

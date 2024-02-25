@@ -3,10 +3,14 @@ $(document).ready(function() {
     let selectedColor = '';
 
     $(".peg").click(function() {
+
+        $(".peg").css("border", "thin black solid");
+        $(this).css("border", "thick black solid");
         // let peg = ($(this).parent())[0];
         selectedColor = $(this).css("background");
-        $(this).css("background", selectedColor);
+        // $(this).css("border", "thick black solid");
         console.log(selectedColor)
+        
     });
 
 });
