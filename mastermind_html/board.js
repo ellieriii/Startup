@@ -43,8 +43,8 @@ $(document).ready(function() {
     $(".submit").click(function() {
 
         $(".active").removeClass("active");
-        // console.log(secretCode);
         let clues = giveClues();
+        checkWin(clues);
         
         guess++;
         for(let i = 0; i < 4; i++) {
@@ -134,23 +134,129 @@ $(document).ready(function() {
         //red kp check
         for (let i = 0; i < 4; i++) {
             if (masterArray[guess][i] === secretArray[i]) {
-                clues.push(1);
-                secretArray[i] = -1;
-                masterArray[guess][i] = -2;
+                clues.push("red");
+                secretArray[i] = "X";
+                masterArray[guess][i] = "x";
             }
-        }
-        //white peg check
-        for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
                 if (masterArray[guess][i] === secretArray[j]) {
-                    clues.push(2);
-                    secretArray[j] = -1;
-                    masterArray[guess][i] = -2;
+                    clues.push("white");
+                    secretArray[j] = "X";
+                    masterArray[guess][i] = "x";
                 }
+        }
+            
+           
+        }
+        reds = 0
+        whites = 0
+        for (hint of clues) {
+            if (hint === "red") {
+                reds += 1;
             }
-        console.log(clues);
-        return clues;    
+            else if (hint=== "white") {
+                whites += 1;
+            }
+        }
+        if (reds === 0 && whites === 1) {
+            $(`.${guess + 1}-1`).css("background", W);
+        }
+        if (reds === 0 && whites === 2) {
+            $(`.${guess + 1}-1`).css("background", W);
+            $(`.${guess + 1}-2`).css("background", W);
+
+        }
+        if (reds === 0 && whites === 3) {
+            $(`.${guess + 1}-1`).css("background", W);
+            $(`.${guess + 1}-2`).css("background", W);
+            $(`.${guess + 1}-3`).css("background", W);
+        }
+        if (reds === 0 && whites === 4) {
+            $(`.${guess + 1}-1`).css("background", W);
+            $(`.${guess + 1}-2`).css("background", W);
+            $(`.${guess + 1}-3`).css("background", W);
+            $(`.${guess + 1}-4`).css("background", W);
+        }
+        if (reds === 1 && whites === 3) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", W);
+            $(`.${guess + 1}-3`).css("background", W);
+            $(`.${guess + 1}-4`).css("background", W);
+        }
+        if (reds === 1 && whites === 2) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", W);
+            $(`.${guess + 1}-3`).css("background", W);
+        }
+        if (reds === 1 && whites === 1) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", W);
+        }
+
+        if (reds === 2 && whites === 2) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", R);
+            $(`.${guess + 1}-3`).css("background", W);
+            $(`.${guess + 1}-4`).css("background", W);
+        }
+        if (reds === 2 && whites === 1) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", R);
+            $(`.${guess + 1}-3`).css("background", W);
+        }
+        if (reds === 2 && whites === 0) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", R);
+        }
+        if (reds === 3 && whites === 1) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", R);
+            $(`.${guess + 1}-3`).css("background", R);
+            $(`.${guess + 1}-4`).css("background", W);
+        }
+        if (reds === 3 && whites === 0) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", R);
+            $(`.${guess + 1}-3`).css("background", R);
+        }
+
+        return clues;
+    }
+
+
+    function checkWin(clues) {
+        let clueStr = clues.join();
+        if (clueStr === "red,red,red,red") {
+            revealSecretCode();
         }
     }
-});
 
+    function revealSecretCode() {
+        alert("congrats");
+        // let secSlots = document.getElementsByClassName("secret");
+        // for (let i = 0; i < 4; i++) {
+        //     let codeValue = secretCode[i];
+        //     if (codeValue === 0) {
+        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(255, 0, 0), rgb(168, 121, 121))");
+        //     }
+        //     if (codeValue === 1) {
+        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(5, 107, 5), rgb(121, 168, 121))");
+        //     }
+        //     if (codeValue === 2) {
+        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(168, 168, 16), rgb(240, 240, 169))");
+        //     }
+        //     if (codeValue === 3) {
+        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(0, 0, 195), rgb(121, 121, 168))");
+        //     }
+        //     if (codeValue === 4) {
+        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(0, 0, 0), rgb(112, 111, 111))");
+        //     }
+        //     if (codeValue === 5) {
+        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(97, 96, 96), rgb(255, 255, 255))");
+        //     }
+
+        // }
+    };
+
+
+});
