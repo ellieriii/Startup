@@ -43,7 +43,9 @@ $(document).ready(function() {
     $(".submit").click(function() {
 
         $(".active").removeClass("active");
+        // console.log(secretCode);
         let clues = giveClues();
+        
         guess++;
         for(let i = 0; i < 4; i++) {
             $(`#g-${guess}-${i}`).addClass("active");
@@ -129,50 +131,26 @@ $(document).ready(function() {
         for (let i =0; i < 4; i++) {
             secretArray.push(secretCode[i]);
         }
-
+        //red kp check
         for (let i = 0; i < 4; i++) {
             if (masterArray[guess][i] === secretArray[i]) {
                 clues.push(1);
-                // secretArray[i] = -1;
+                secretArray[i] = -1;
                 masterArray[guess][i] = -2;
             }
-            
         }
-
-        console.log(secretArray);
-        console.log(masterArray[guess]);
+        //white peg check
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 4; j++) {
+                if (masterArray[guess][i] === secretArray[j]) {
+                    clues.push(2);
+                    secretArray[j] = -1;
+                    masterArray[guess][i] = -2;
+                }
+            }
         console.log(clues);
-        return clues;
+        return clues;    
+        }
     }
-    // function giveClues() {
-    //     console.log(secretCode)
-    //     const currentGuess = getGuessArray(guess);
-    //     const clues = [];
-    //     for (let i = 0; i < currentGuess.length; i++) {
-    //         // const peg = $(currentGuess[i]).css("background");
-    //         if (currentGuess[i] === secretCode[i]) {
-    //             clues.push("correct");
-    //         } else if (secretCode.includes(currentGuess[i])) {
-    //             clues.push("exists");
-    //         } else {
-    //             clues.push("incorrect");
-    //         }
-    //     }
-    //     console.log(clues);
-    //     while (clues.length > 0) {
-    //         clues.pop();
-    //     }
-    // }
-    
-    // function getGuessArray(guess) {
-    //     const guessArray = [];
-    //     for (let i = 0; i < 4; i++) {
-    //         const peg = $(`#g-${guess}-${i}`).css("background");
-    //         guessArray.push(peg);
-    //     }
-    //     return guessArray;
-    // }
-
-
 });
 
