@@ -35,14 +35,26 @@
     <h2>How to Play Mastermind</h2>
 
     <p>
-      <div class="line">Solve the hidden code in under 10 guesses and claim the title of Mastermind!</div><br>
-      <div class="line">You, the Codebreaker will place four code pegs into the first row of holes, attempting to duplicate the exact colors and positions of the secret code. </div><br>
-      <div class="line">Then, red and white key pegs will be placed next to your guess as clues to guide you toward the secret code.</div> <br>
-      <ol>
+      
+      <aside><img  class="board-example"src= "empty_board_gold.png" width="300">
+        <div class="line">Solve the hidden code in under 10 guesses and claim the title of Mastermind!</div><br>
+        <div class="line">You, the Codebreaker will place four code pegs into the bottom row of holes, attempting to duplicate the exact colors and positions of a secret, 4-color code. </div><br>
+        <div class="line">Then, red and white key pegs will be placed to the right of your guess as clues to guide you toward the secret code.</div> <br>
+        <ul>
+          <li class="line"> A red key peg corresponds to a code peg that's the correct color and in the correct position</li><br>
+          <li class = "line"> A white key peg corresponds to a code peg that's the correct color, but not in the correct position</li><br>
+          <li class = "line">An empty key peg slot indicates that a color is not used in the code</li>
+        </ul><br>
+        <div class="line">The key pegs will not be given in any particular order. It's part of the challenge for the Codebreaker to figure out which key pegs correspond to which code pegs.</div> <br>
+        <div class="line">The Codebreaker should remember that one key peg corresponds to one code peg, and a red key peg takes precedence over a white one. </div><br>
+        <div class="line">Your next guess will be placed in the line above your first guess, and you will continue moving up the board until the hidden code is revealed.</div> <br>
+      </aside>
+      
+      <!-- <ol>
         <li class="line"> A red key peg for each code peg that's the right color and in the right position</li>
         <li class = "line"> A white key peg for each code peg that's the right color, but not in the right position</li>
         <li class = "line">No key pegs indicate a color is not used in the code</li>
-      </ol><br>
+      </ol><br> -->
       <div class="line">The key pegs will not be given in any particular order. It's part of the challenge for the Codebreaker to figure out which key pegs correspond to which code pegs.</div> <br>
       <div class="line">The Codebreaker should remember that one key peg corresponds to one code peg, and a red key peg takes precedence over a white one. </div><br>
     </p>
@@ -50,11 +62,11 @@
       <div class="example">
         <p class="ex-title">Example:</p><br>
 
-        <img alt="example code" src="example code row.png" width="500"><br>
+        <img alt="example code" src="example code row.png" width="300"><br>
         <p>In this example, the red and white key pegs reveal that the guess contains two code pegs that are the correct color and in the correct position and one code peg that is present in the hidden code, but it is not positioned correctly. </p><br>
 
         <p>The hidden code in this scenario could be:</p> <br>
-        <img alt="example hidden code" src="example_hidden_code.png" width="500">
+        <img alt="example hidden code" src="example_hidden_code.png" width="300">
       </div>
     
 

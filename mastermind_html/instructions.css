@@ -10,6 +10,7 @@ main {
     flex-direction:column;
     align-items: center;
     font-size:25px; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 main h2 {
@@ -17,6 +18,7 @@ main h2 {
     padding-bottom: 3%;
     font-weight:100;
     justify-items: center;
+    font-family: 'OCR A Std', serif;
 }
 
 
@@ -26,7 +28,7 @@ main h2 {
     margin-left:3em;
 }
 
-ol {
+ul {
     margin-left:5em;
     margin-right:5em;
 }
@@ -56,5 +58,10 @@ img {
     border-radius: 20px;
 }
 
+aside .board-example {
+    float: right;
+    margin: 1em;
+    margin-right: 3em;
+}
 
 
