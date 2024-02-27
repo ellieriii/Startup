@@ -271,6 +271,7 @@ $(document).ready(function() {
             }
 
         }
+        openModal()
     };
 
 
