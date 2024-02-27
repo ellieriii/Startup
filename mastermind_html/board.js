@@ -12,13 +12,15 @@ $(document).ready(function() {
     let selectedColor = '';
     let guess = 0
     $(".submit").hide();
-    let pegCount = 0;
+    
     let isSelected = false;
     let secretCode = makeSecretCode();
+    console.log(secretCode);
 
 
     let tempArray =  $(".cp-row");
     let guessArray = [];
+    let pegCount = 0;
     for(let i = 10; i >= 0; i--) {
         guessArray.push(tempArray[i]);
     }
@@ -51,6 +53,7 @@ $(document).ready(function() {
             $(`#g-${guess}-${i}`).addClass("active");
         }
         $(".submit").hide();
+        pegCount = 0;
         
     })
 
@@ -68,6 +71,7 @@ $(document).ready(function() {
     
     $(".cp-slot").click(function() {
         if($(this).hasClass('active')) {
+            // pegCount = 0;
             if ($(this).css("background") == slotDefault) {
                 $(this).css("background", selectedColor);
                 let coord = $(this).attr("id");
@@ -75,14 +79,18 @@ $(document).ready(function() {
                 pegCount++;
                 if(pegCount === 4) {
                     $(".submit").show();
-                    pegCount = 0;
+                    
                 }
             }
             else if ($(this).css("background") !== slotDefault) {
                 $(this).css("background", slotDefault);
                 pegCount--;
-        }}
+                $(".submit").hide();
+            }
+            console.log(pegCount);
+    }
     });
+    pegCount = 0;
 
     function makeSecretCode() {
         const colors = [0, 1, 2, 3, 4, 5];
@@ -137,17 +145,18 @@ $(document).ready(function() {
                 clues.push("red");
                 secretArray[i] = "X";
                 masterArray[guess][i] = "x";
-            }
-            for (let j = 0; j < 4; j++) {
-                if (masterArray[guess][i] === secretArray[j]) {
-                    clues.push("white");
-                    secretArray[j] = "X";
-                    masterArray[guess][i] = "x";
                 }
         }
-            
-           
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 4; j++) { 
+                if (masterArray[guess][i] === secretArray[j]) {
+                        clues.push("white");
+                        secretArray[j] = "X";
+                        masterArray[guess][i] = "x";    
+            }
         }
+        }
+
         reds = 0
         whites = 0
         for (hint of clues) {
@@ -219,6 +228,12 @@ $(document).ready(function() {
             $(`.${guess + 1}-2`).css("background", R);
             $(`.${guess + 1}-3`).css("background", R);
         }
+        if (reds === 4) {
+            $(`.${guess + 1}-1`).css("background", R);
+            $(`.${guess + 1}-2`).css("background", R);
+            $(`.${guess + 1}-3`).css("background", R);
+            $(`.${guess + 1}-4`).css("background", R);
+        }
 
         return clues;
     }
@@ -232,30 +247,30 @@ $(document).ready(function() {
     }
 
     function revealSecretCode() {
-        alert("congrats");
-        // let secSlots = document.getElementsByClassName("secret");
-        // for (let i = 0; i < 4; i++) {
-        //     let codeValue = secretCode[i];
-        //     if (codeValue === 0) {
-        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(255, 0, 0), rgb(168, 121, 121))");
-        //     }
-        //     if (codeValue === 1) {
-        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(5, 107, 5), rgb(121, 168, 121))");
-        //     }
-        //     if (codeValue === 2) {
-        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(168, 168, 16), rgb(240, 240, 169))");
-        //     }
-        //     if (codeValue === 3) {
-        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(0, 0, 195), rgb(121, 121, 168))");
-        //     }
-        //     if (codeValue === 4) {
-        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(0, 0, 0), rgb(112, 111, 111))");
-        //     }
-        //     if (codeValue === 5) {
-        //         $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(97, 96, 96), rgb(255, 255, 255))");
-        //     }
+        
+        let secSlots = document.getElementsByClassName("secret");
+        for (let i = 0; i < 4; i++) {
+            secSlots[i].textContent = '';
+            if (secretCode[i] === 0) {
+                $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(255, 0, 0), rgb(168, 121, 121))");
+            }
+            if (secretCode[i] === 1) {
+                $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(5, 107, 5), rgb(121, 168, 121))");
+            }
+            if (secretCode[i] === 2) {
+                $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(168, 168, 16), rgb(240, 240, 169))");
+            }
+            if (secretCode[i] === 3) {
+                $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(0, 0, 195), rgb(121, 121, 168))");
+            }
+            if (secretCode[i] === 4) {
+                $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(0, 0, 0), rgb(112, 111, 111))");
+            }
+            if (secretCode[i] === 5) {
+                $(secSlots[i]).css("background", "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(97, 96, 96), rgb(255, 255, 255))");
+            }
 
-        // }
+        }
     };
 
 
