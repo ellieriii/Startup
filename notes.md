@@ -119,9 +119,40 @@ Domain: mastermind-online.click
 Key location: ~/OneDrive/Documents/CS_260/Keys/startup-key-pair.pem
 
 ## Deploying
-
 Make sure that your files are in the same directory!!  
 "$ ./deployFiles.sh -k ~/OneDrive/Documents/CS_260/Keys/startup-key-pair.pem -h mastermind-online.click -s startup"
 
+## JSON:
+string	"crockford"
+number	42
+boolean	true
+array	[null,42,"crockford"]
+object	{"a":1,"b":"crockford"}
+null	null
+### Converting to JS
+const obj = { a: 2, b: 'crockford', c: undefined };
+const json = JSON.stringify(obj);
+const objFromJson = JSON.parse(json);
 
+console.log(obj, json, objFromJson);
+// OUTPUT:
+// {a: 2, b: 'crockford', c: undefined}
+// {"a":2, "b":"crockford"}
+// {a: 2, b: 'crockford'}
 
+## Promises vs. Async/Await
+### Promises
+The execution of a promise allows the main rendering thread to continue while some action is executed in the background. You create a promise by calling the Promise object constructor and passing it an executor function that runs the asynchronous operation. Executing asynchronously means that promise constructor may return before the promise executor function runs. The state of the promise execution is always in one of three states different states.
+
+pending - Currently running asynchronously
+fulfilled - Completed successfully
+rejected - Failed to complete
+
+We can demonstrate asynchronous execution by using the standard JavaScript setTimeout function to create a delay in the execution of the code. The setTimeout function takes the number of milliseconds to wait and a function to call after that amount of time has expired. We call the delay function in a for loop in the promise executor and also a for loop outside the promise so that both code blocks are running in parallel.
+Calling resolve sets the promise to the fulfilled state, and calling reject sets the promise to the rejected state.
+The then function is called if the promise is fulfilled, catch is called if the promise is rejected, and finally is always called after all the processing is completed.
+
+### Async/Await
+The await keyword wraps the execution of a promise and removes the need to chain functions. The await expression will block until the promise state moves to fulfilled, or throws an exception if the state moves to rejected. 
+Uses a try/catch block
+you cannot call await unless it is called at the top level of the JavaScript, or is in a function that is defined with the async keyword. Applying the async keyword transforms the function so that it returns a promise that will resolve to the value that was previously returned by the function. Basically this turns any function into an asynchronous function so that it can in turn make asynchronous requests.
