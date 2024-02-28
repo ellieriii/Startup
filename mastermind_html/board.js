@@ -1,13 +1,5 @@
 $(document).ready(function() {
 
-    //colors: 
-    let R = "linear-gradient(to top right, red, rgb(168, 121, 121))"
-    let G = "linear-gradient(to top right, rgb(5, 107, 5), rgb(121, 168, 121))"
-    let Y = "linear-gradient(to top right, rgb(168, 168, 16), rgb(240, 240, 169))"
-    let Bu = "linear-gradient(to top right, rgb(0, 0, 195), rgb(121, 121, 168))"
-    let Ba = "linear-gradient(to top right, black, rgb(112, 111, 111))"
-    let W = "linear-gradient(to top right, rgb(97, 96, 96), white)"
-
     let slotDefault = "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(53, 50, 50), rgb(128, 128, 128)) repeat scroll 0% 0% / auto padding-box border-box";
     let selectedColor = '';
     let guess = 0
@@ -280,7 +272,6 @@ $(document).ready(function() {
         else {
             openModal2();
         }
-        
     };
 
 
