@@ -47,6 +47,10 @@ $(document).ready(function() {
         $(".active").removeClass("active");
         let clues = giveClues();
         checkWin(clues);
+        console.log(guess);
+        if (guess === 9) {
+            revealSecretCode();
+        }
         
         guess++;
         for(let i = 0; i < 4; i++) {
@@ -62,10 +66,8 @@ $(document).ready(function() {
 
         $(".peg").css("border", "thin black solid");
         $(this).css("border", "thick black solid");
-        // let peg = ($(this).parent())[0];
         selectedColor = $(this).css("background");
-        // $(this).css("border", "thick black solid");
-        // console.log(selectedColor)
+        
         
     });
     
@@ -87,7 +89,6 @@ $(document).ready(function() {
                 pegCount--;
                 $(".submit").hide();
             }
-            console.log(pegCount);
     }
     });
     pegCount = 0;
@@ -107,7 +108,6 @@ $(document).ready(function() {
       let x = coordinates[1];
       let y = coordinates[2];
       masterArray[x][y] = makeColorANumber(color);
-    //   console.log(masterArray);
     }
 
     function makeColorANumber(color) {
@@ -153,9 +153,10 @@ $(document).ready(function() {
                         clues.push("white");
                         secretArray[j] = "X";
                         masterArray[guess][i] = "x";    
+                }
             }
         }
-        }
+
 
         reds = 0
         whites = 0
@@ -235,6 +236,7 @@ $(document).ready(function() {
             $(`.${guess + 1}-4`).css("background", R);
         }
 
+        console.log(clues);
         return clues;
     }
 
@@ -271,7 +273,14 @@ $(document).ready(function() {
             }
 
         }
-        openModal()
+        
+        if (guess <= 9) {
+            openModal1();
+        }
+        else {
+            openModal2();
+        }
+        
     };
 
 
