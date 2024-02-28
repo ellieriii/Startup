@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    let R = "linear-gradient(to top right, red, rgb(168, 121, 121))"
+    let W = "linear-gradient(to top right, rgb(97, 96, 96), white)"
 
     let slotDefault = "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(53, 50, 50), rgb(128, 128, 128)) repeat scroll 0% 0% / auto padding-box border-box";
     let selectedColor = '';
@@ -163,6 +165,9 @@ $(document).ready(function() {
         if (reds === 0 && whites === 1) {
             $(`.${guess + 1}-1`).css("background", W);
         }
+        if (reds === 1 && whites === 0) {
+            $(`.${guess + 1}-1`).css("background", R);
+        }
         if (reds === 0 && whites === 2) {
             $(`.${guess + 1}-1`).css("background", W);
             $(`.${guess + 1}-2`).css("background", W);
@@ -266,13 +271,36 @@ $(document).ready(function() {
 
         }
         
+
+        function saveScore(guess) {
+            // Retrieve existing scores from local storage
+            let existingScores = localStorage.getItem('gameScores');
+        
+            // If there are no existing scores, create an empty array
+            if (!existingScores) {
+                existingScores = [];
+            } else {
+                // Parse the existing scores from JSON
+                existingScores = JSON.parse(existingScores);
+            }
+             guess += 1;
+            // Add the new score to the array
+            existingScores.push(guess);
+        
+            // Save the updated scores back to local storage
+            localStorage.setItem('gameScores', JSON.stringify(existingScores));
+        }
+
         if (guess <= 9) {
             openModal1();
+            saveScore(guess);
         }
         else {
             openModal2();
+            saveScore(guess);
         }
     };
 
+    
 
 });
