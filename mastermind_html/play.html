@@ -92,7 +92,7 @@
   <div class="overlay" id="modalOverlay1">
       <div class="modal">
           <p>Congratulations!</p>
-          <span class="close-btn btn" onclick="closeModal1()"><a class = "close-btn" href="play.html">Play Again</a></span>
+          <span class="close-btn btn" onclick="pacloseModal1()"><a class = "close-btn" href="play.html">Play Again</a></span>
           <span class="close-btn btn" onclick="closeModal1()"><a class = "close-btn" href="stats.html">Exit</a></span>
       </div>
   </div>
@@ -100,45 +100,95 @@
   <div class="overlay" id="modalOverlay2">
     <div class="modal">
         <p>Sorry, you ran out of guesses!</p>
-        <span class="close-btn btn" onclick="closeModal2()"><a class = "close-btn" href="play.html">Play Again</a></span>
-        <span class="close-btn btn" onclick="closeModal2()"><a class = "close-btn" href="stats.html">Exit</a></span>
+        <span class="close-btn btn" onclick="pacloseModal2()"></span><a class = "close-btn" href="play.html">Play Again</a></span>
+        <span class="close-btn btn" onclick="closeModal2()"></span><a class = "close-btn" href="stats.html">Exit</a></span>
     </div>
 </div>
 
-<script>
+
+
+
+    
+
+
+  <main>
+    <ul id = "playerUpdates">
+    </ul>
+    <hr>
+    
+    <script>
     function openModal1() {
-        document.getElementById("modalOverlay1").style.display = "flex";
+        document.getElementById("modalOverlay1").style.display = "flex";    
     }
 
     function closeModal1() {
         document.getElementById("modalOverlay1").style.display = "none";
         $(".active").removeClass("active");
-        
+        localStorage.setItem('updateFlag', true);
+    }
+    function pacloseModal1() {
+        document.getElementById("modalOverlay1").style.display = "none";
+        $(".active").removeClass("active");
+        localStorage.setItem('updateFlag', true);
+        playerStartedGame();
     }
 
     function openModal2() {
-        document.getElementById("modalOverlay2").style.display = "flex";
-        
+        document.getElementById("modalOverlay2").style.display = "flex";  
     }
 
     function closeModal2() {
         document.getElementById("modalOverlay2").style.display = "none";
         $(".active").removeClass("active");
-        
+        localStorage.setItem('updateFlag', true);   
     }
-</script>
+    function pacloseModal2() {
+        document.getElementById("modalOverlay2").style.display = "none";
+        $(".active").removeClass("active");
+        localStorage.setItem('updateFlag', true);
+        playerStartedGame();
+    }
 
-  <main>
-    <ul>
-      <li>Mike started a new game</li>
-      <li>User125437 started a new game</li>
-      <li>HarryPotter started a new game</li>
-      <li>...</li>
-    </ul>
-    <hr>
-    <!-- <h3>{Username}'s Game</h2> -->
-    <!-- <img alt="Board" src="Empty_mastermind_board.png" width="300" &nbsp>
-    <img alt="Dock" src="code_pegs_dock.png" width="200"> -->
+    function playerStartedGame() {
+        var userName = localStorage.getItem("userName");
+        var newCurrent = document.createElement("li");
+        newCurrent.textContent = userName + " started a new game";
+        var playerList = document.getElementById("playerUpdates");
+        playerList.appendChild(newCurrent); 
+
+        savePlayerUpdates()
+    }
+
+    function savePlayerUpdates() {
+      var playerList = document.getElementById("playerUpdates");
+        var updates = Array.from(playerList.children).map(function (li) {
+            return li.textContent;
+        });
+        localStorage.setItem("playerUpdates", JSON.stringify(updates));
+    }
+
+    function loadPlayerUpdates() {
+        var playerList = document.getElementById("playerUpdates");
+        var updates = localStorage.getItem("playerUpdates");
+
+        if (updates) {
+            updates = JSON.parse(updates);
+
+            updates.forEach(function (updateText) {
+                var newCurrent = document.createElement("li");
+                newCurrent.textContent = updateText;
+                playerList.appendChild(newCurrent);
+            });
+        }
+    }
+
+    window.onload = function () {
+      loadPlayerUpdates();
+    }
+
+    
+
+</script>
     <div class="middle">
       <div class="board">
         <!-- The secret code row -->
@@ -352,4 +402,5 @@
 </body>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 <script src = "board.js"></script>
+<!-- <script src = "stats.js"></script> -->
 </html>

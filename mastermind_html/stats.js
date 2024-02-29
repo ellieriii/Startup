@@ -15,29 +15,17 @@ else {
     total = existingScores.length;
 }
 var scoresCount = JSON.parse(localStorage.getItem('scoresCount')) || {};
-var scoresUpdatedFlag = localStorage.getItem('scoresUpdatedFlag');
 
-if (scoresUpdatedFlag === "true") {
-    updateScores(existingScores);
-    localStorage.setItem('scoresUpdatedFlag', 'false');
+let newGuesses = JSON.stringify(localStorage.getItem("newGuesses"));
+console.log(newGuesses);
 
-}
-    // makeBars(scoresCount);
-
-    // Set the flag to indicate scores have been updated in this session
-    // localStorage.setItem('scoresUpdatedFlag', 'false');
-
-
-// Parse the JSON strings into JavaScript objects
-
-
-// Check if existingScores has changed
 function updateScores() { 
-    for (score of existingScores) {
+
+    for (let score of newGuesses) {
         var key = score + "-scores";
         scoresCount[key] = (scoresCount[key] || 0) + 1;
+        console.log(scoresCount);
     }
-    
     localStorage.setItem("scoresCount", JSON.stringify(scoresCount));
 
     for (var key in scoresCount) {
@@ -52,16 +40,14 @@ function updateScores() {
             element.style.justifyContent = 'right';
             element.style["font-family"] = "times-new roman";
             element.textContent = value;
-            // element.textContent = (scoreCountPc * 100).toFixed(1) + "%";
-        }
+        }   
+    }
     
+};
+
+flag = localStorage.getItem("updateFlag");
+if (flag === "true") {
+    updateScores();
+    localStorage.setItem('updateFlag', false);
+    localStorage.removeItem("newGuesses"); 
 }
-}
-
-// function makeBars() {
-    
-
-
-
-
-

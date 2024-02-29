@@ -275,6 +275,7 @@ $(document).ready(function() {
         function saveScore(guess) {
             // Retrieve existing scores from local storage
             let existingScores = localStorage.getItem('gameScores');
+            let newGuesses = [];
         
             // If there are no existing scores, create an empty array
             if (!existingScores) {
@@ -284,24 +285,32 @@ $(document).ready(function() {
                 existingScores = JSON.parse(existingScores);
             }
              guess += 1;
+             newGuesses.push(guess);
+             for (let nguess of newGuesses) {
+                existingScores.push(nguess);
+             }
             // Add the new score to the array
-            existingScores.push(guess);
-            localStorage.setItem('scoresUpdatedFlag', 'true');
-        
-            // Save the updated scores back to local storage
+            
+            localStorage.setItem("newGuesses", JSON.stringify(newGuesses));
             localStorage.setItem('gameScores', JSON.stringify(existingScores));
         }
 
         if (guess <= 9) {
             openModal1();
             saveScore(guess);
+          
+
         }
         else {
             openModal2();
             saveScore(guess);
+           
         }
+        
     };
 
     
 
 });
+
+ 
