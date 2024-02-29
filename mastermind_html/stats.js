@@ -1,38 +1,29 @@
 userName = localStorage.getItem("userName");
-document.querySelector("h2").textContent = userName + "'s Score Distribution"
-
+document.querySelector("h2").textContent = userName + "'s Score Distribution";
 
 let maxWidth = 300;
-let existingScores = localStorage.getItem('gameScores');
-let total;
+let existingScores = JSON.parse(localStorage.getItem('gameScores')) || [];
+// let newGuesses = JSON.parse(localStorage.getItem('newGesses')) || [];
 
-if (!existingScores) {
-    existingScores = [];
-} 
-else {
-    // Parse the existing scores from JSON
-    existingScores = JSON.parse(existingScores);
-    total = existingScores.length;
-}
+let total = existingScores.length;
+
 var scoresCount = JSON.parse(localStorage.getItem('scoresCount')) || {};
 
-let newGuesses = JSON.stringify(localStorage.getItem("newGuesses"));
-console.log(newGuesses);
+function updateScores() {
 
-function updateScores() { 
+    for (let score of existingScores) {
+            var key = score + "-scores";
+            scoresCount[key] = (scoresCount[key] || 0) + 1;
+            localStorage.removeItem("gameScores");
+        }
+    
 
-    for (let score of newGuesses) {
-        var key = score + "-scores";
-        scoresCount[key] = (scoresCount[key] || 0) + 1;
-        console.log(scoresCount);
-    }
     localStorage.setItem("scoresCount", JSON.stringify(scoresCount));
 
     for (var key in scoresCount) {
         var value = scoresCount[key];
         let scoreCountPc = value / total;
-        console.log(total);
-        console.log(scoreCountPc);
+
         var elements = document.getElementsByClassName(key);
         for (var element of elements) {
             element.style.width = (maxWidth * scoreCountPc) + 'px';
@@ -40,14 +31,12 @@ function updateScores() {
             element.style.justifyContent = 'right';
             element.style["font-family"] = "times-new roman";
             element.textContent = value;
-        }   
+        }
     }
-    
-};
+}
 
 flag = localStorage.getItem("updateFlag");
 if (flag === "true") {
     updateScores();
     localStorage.setItem('updateFlag', false);
-    localStorage.removeItem("newGuesses"); 
 }

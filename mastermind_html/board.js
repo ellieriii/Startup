@@ -270,47 +270,36 @@ $(document).ready(function() {
             }
 
         }
-        
-
-        function saveScore(guess) {
-            // Retrieve existing scores from local storage
-            let existingScores = localStorage.getItem('gameScores');
-            let newGuesses = [];
-        
-            // If there are no existing scores, create an empty array
-            if (!existingScores) {
-                existingScores = [];
-            } else {
-                // Parse the existing scores from JSON
-                existingScores = JSON.parse(existingScores);
-            }
-             guess += 1;
-             newGuesses.push(guess);
-             for (let nguess of newGuesses) {
-                existingScores.push(nguess);
-             }
-            // Add the new score to the array
-            
-            localStorage.setItem("newGuesses", JSON.stringify(newGuesses));
-            localStorage.setItem('gameScores', JSON.stringify(existingScores));
-        }
-
-        if (guess <= 9) {
-            openModal1();
-            saveScore(guess);
-          
-
-        }
-        else {
-            openModal2();
-            saveScore(guess);
-           
-        }
-        
-    };
-
     
+        
 
+    function saveScore(guess) {
+        // Retrieve existing scores from local storage
+        let existingScores = JSON.parse(localStorage.getItem('gameScores')) || [];
+        let newGuesses = JSON.parse(localStorage.getItem('newGesses')) || [];
+    
+        // If there are no existing scores, create an empty array
+        guess += 1;
+        // Add the new score to the array
+        // newGuesses.push(guess)
+        existingScores.push(guess);
+    
+        // Save the updated scores back to local storage
+        // localStorage.setItem("newGuesses", JSON.stringify(newGuesses))
+        localStorage.setItem('gameScores', JSON.stringify(existingScores));
+    }
+
+    if (guess <= 9) {
+        openModal1();
+        saveScore(guess); 
+    }
+    else {
+        openModal2();
+        saveScore(guess);
+    }
+    }
 });
 
- 
+
+
+
