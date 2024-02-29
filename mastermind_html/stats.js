@@ -1,5 +1,5 @@
 
-let maxWidth = 400;
+let maxWidth = 300;
 let existingScores = localStorage.getItem('gameScores');
 let total;
 
