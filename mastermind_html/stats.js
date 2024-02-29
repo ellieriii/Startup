@@ -1,3 +1,6 @@
+userName = localStorage.getItem("userName");
+document.querySelector("h2").textContent = userName + "'s Score Distribution"
+
 
 let maxWidth = 300;
 let existingScores = localStorage.getItem('gameScores');
