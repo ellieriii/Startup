@@ -286,6 +286,7 @@ $(document).ready(function() {
              guess += 1;
             // Add the new score to the array
             existingScores.push(guess);
+            localStorage.setItem('scoresUpdatedFlag', 'true');
         
             // Save the updated scores back to local storage
             localStorage.setItem('gameScores', JSON.stringify(existingScores));
