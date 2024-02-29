@@ -77,7 +77,7 @@
         </li>
         <li><a href="instructions.html">Instructions</a></li>
         <li><a href="play.html">Play</a></li>
-        <li><a href="stats.html">Stats</a></li>
+        <li><a onclick = "localStorage.setItem('updateFlag', true)" href="stats.html">Stats</a></li>
         
 
         
@@ -104,11 +104,6 @@
         <span class="close-btn btn" onclick="closeModal2()"></span><a class = "close-btn" href="stats.html">Exit</a></span>
     </div>
 </div>
-
-
-
-
-    
 
 
   <main>
@@ -155,7 +150,6 @@
         newCurrent.textContent = userName + " started a new game";
         var playerList = document.getElementById("playerUpdates");
         playerList.appendChild(newCurrent); 
-
         savePlayerUpdates()
     }
 
@@ -164,6 +158,9 @@
         var updates = Array.from(playerList.children).map(function (li) {
             return li.textContent;
         });
+
+        
+
         localStorage.setItem("playerUpdates", JSON.stringify(updates));
     }
 
@@ -178,6 +175,10 @@
                 var newCurrent = document.createElement("li");
                 newCurrent.textContent = updateText;
                 playerList.appendChild(newCurrent);
+                if (playerList.children.length > 4) {
+                playerList.removeChild(playerList.firstElementChild);
+        }
+
             });
         }
     }

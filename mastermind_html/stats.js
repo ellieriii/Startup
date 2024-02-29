@@ -1,13 +1,11 @@
 userName = localStorage.getItem("userName");
 document.querySelector("h2").textContent = userName + "'s Score Distribution";
 
-let maxWidth = 300;
+let maxWidth = 400;
 let existingScores = JSON.parse(localStorage.getItem('gameScores')) || [];
-// let newGuesses = JSON.parse(localStorage.getItem('newGesses')) || [];
-
-let total = existingScores.length;
 
 var scoresCount = JSON.parse(localStorage.getItem('scoresCount')) || {};
+
 
 function updateScores() {
 
@@ -20,11 +18,22 @@ function updateScores() {
 
     localStorage.setItem("scoresCount", JSON.stringify(scoresCount));
 
+    function getTotal () {
+        let total = 0;
+        for (var key in scoresCount) {
+            total += scoresCount[key];
+        } 
+        return total
+    }
+    
+
+    total = getTotal()
     for (var key in scoresCount) {
-        var value = scoresCount[key];
+        var value = (scoresCount[key]);
         let scoreCountPc = value / total;
 
         var elements = document.getElementsByClassName(key);
+        
         for (var element of elements) {
             element.style.width = (maxWidth * scoreCountPc) + 'px';
             element.style.display = 'flex';
