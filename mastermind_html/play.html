@@ -159,8 +159,6 @@
             return li.textContent;
         });
 
-        
-
         localStorage.setItem("playerUpdates", JSON.stringify(updates));
     }
 
@@ -184,6 +182,14 @@
     }
 
     window.onload = function () {
+      var playerList = document.getElementById("playerUpdates");
+      if (!localStorage.getItem("playerUpdates")) {
+        var userName = localStorage.getItem("userName");
+        var newCurrent = document.createElement("li");
+        newCurrent.textContent = userName + " started a new game";
+        playerList.appendChild(newCurrent);
+      }
+       
       loadPlayerUpdates();
     }
 
