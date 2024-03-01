@@ -62,7 +62,7 @@ Are you a fan of strategy, logic, and the sweet satisfaction of deduction? Maste
 - (done) 20% JavaScript support for future database data
     - Game data is stored in local storage to record the number of guesses it took the player to solve the code after each play.
 - (done) 20% JavaScript support for future WebSocket.
-    - The stored username is used on the "play" to mock WebSocket data when a player starts a new game.
+    - The stored username is used on the "play" page to mock WebSocket data when a player starts a new game.
 - (done) 40% JavaScript support for your application's interaction logic.
     - The game logic works completely, and scores are displayed on the stats page
 
