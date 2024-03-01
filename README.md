@@ -56,7 +56,7 @@ Are you a fan of strategy, logic, and the sweet satisfaction of deduction? Maste
 - (done) Simon Javascript deployed to my production environment
 - (done) A link to your GitHub startup repository prominently displayed on your application's home page
 - (done) Notes in your startup Git repository README.md file documenting what you modified and added with this deliverable.
-- (done) At least 10 hit commits spread across the assignment period
+- (done) At least 10 git commits spread across the assignment period
 - (done) 20% JavaScript support for future login
     - On the "login" and "create account" pages, userName is stored to localStorage to display throughout the application
 - (done) 20% JavaScript support for future database data
