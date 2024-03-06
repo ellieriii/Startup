@@ -56,15 +56,15 @@ Are you a fan of strategy, logic, and the sweet satisfaction of deduction? Maste
 - (done) Simon Javascript deployed to my production environment
 - (done) A link to your GitHub startup repository prominently displayed on your application's home page
 - (done) Notes in your startup Git repository README.md file documenting what you modified and added with this deliverable.
-- (done) At least 10 hit commits spread across the assignment period
+- (done) At least 10 git commits spread across the assignment period
 - (done) 20% JavaScript support for future login
     - On the "login" and "create account" pages, userName is stored to localStorage to display throughout the application
 - (done) 20% JavaScript support for future database data
     - Game data is stored in local storage to record the number of guesses it took the player to solve the code after each play.
 - (done) 20% JavaScript support for future WebSocket.
-    - The stored username is used on the "play" to mock WebSocket data when a player starts a new game.
-- (mostly done) 40% JavaScript support for your application's interaction logic.
-    - The game logic works completely, however, displaying the scores on the stats page is not entirely functional.
+    - The stored username is used on the "play" page to mock WebSocket data when a player starts a new game.
+- (done) 40% JavaScript support for your application's interaction logic.
+    - The game logic works completely, and scores are displayed on the stats page
 
 
 
