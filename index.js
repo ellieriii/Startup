@@ -8,7 +8,7 @@ const port = process.argv.length > 2 ? process.argv[2] : 3000;
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
-  
+
 // JSON body parsing using built-in middleware
 app.use(express.json());
 
@@ -18,3 +18,9 @@ app.use(express.static('public'));
 // Router for service endpoints
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
+
+apiRouter.get('/stats', (_req, res) => {
+    res.send("Stats");
+});
+
+
