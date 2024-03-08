@@ -1,0 +1,15 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "Are you a fan of strategy, logic, and the sweet satisfaction of deduction? Mastermind is the perfect way to engage your mind and enjoy a fun, competitive, code-breaking challenge. Try to solve a hidden 4-color code in under 10 guesses based on given clues and claim your title of \"Mastermind\"!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
