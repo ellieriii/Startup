@@ -33,3 +33,7 @@ li {
     flex-direction: column;
     justify-items: center;
 }
+
+.hidden {
+    visibility: hidden;
+}

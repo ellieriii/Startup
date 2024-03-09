@@ -5,7 +5,7 @@ $(document).ready(function() {
     let slotDefault = "rgba(0, 0, 0, 0) linear-gradient(to right top, rgb(53, 50, 50), rgb(128, 128, 128)) repeat scroll 0% 0% / auto padding-box border-box";
     let selectedColor = '';
     let guess = 0
-    $(".submit").hide();
+    // $(".submit").hide();
     
     let isSelected = false;
     let secretCode = makeSecretCode();
@@ -50,7 +50,7 @@ $(document).ready(function() {
         for(let i = 0; i < 4; i++) {
             $(`#g-${guess}-${i}`).addClass("active");
         }
-        $(".submit").hide();
+        document.getElementById('submit').classList.add('hidden');
         pegCount = 0;
         
     })
@@ -61,7 +61,6 @@ $(document).ready(function() {
         $(".peg").css("border", "thin black solid");
         $(this).css("border", "thick black solid");
         selectedColor = $(this).css("background");
-        
         
     });
     
@@ -74,14 +73,13 @@ $(document).ready(function() {
                 updateMasterArray(selectedColor, coord);
                 pegCount++;
                 if(pegCount === 4) {
-                    $(".submit").show();
-                    
+                    document.getElementById('submit').classList.remove('hidden');
                 }
             }
             else if ($(this).css("background") !== slotDefault) {
                 $(this).css("background", slotDefault);
                 pegCount--;
-                $(".submit").hide();
+                document.getElementById('submit').classList.add('hidden');
             }
     }
     });
