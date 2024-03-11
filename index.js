@@ -4,11 +4,6 @@ const app = express();
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
-
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-  });
-
 // JSON body parsing using built-in middleware
 app.use(express.json());
 
@@ -19,8 +14,26 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-apiRouter.get('/stats', (_req, res) => {
-    res.send("Stats");
+
+// SubmitScore
+apiRouter.post('/score', (req, res) => {
+  scores = [];
+  scores = updateScores(req.body, scores);
+  res.send(scores);
+});
+
+// Return the application's default page if the path is unknown
+app.use((_req, res) => {
+  res.sendFile('index.html', { root: 'public' });
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 
 
+
+function updateScores(guess, scores) {
+  scores.push(guess)
+  return scores;
+}

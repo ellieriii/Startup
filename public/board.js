@@ -41,7 +41,6 @@ $(document).ready(function() {
         $(".active").removeClass("active");
         let clues = giveClues();
         checkWin(clues);
-        console.log(guess);
         if (guess === 9) {
             revealSecretCode();
         }
@@ -230,8 +229,6 @@ $(document).ready(function() {
             $(`.${guess + 1}-3`).css("background", R);
             $(`.${guess + 1}-4`).css("background", R);
         }
-
-        console.log(clues);
         return clues;
     }
 
@@ -272,19 +269,44 @@ $(document).ready(function() {
         
 
     function saveScore(guess) {
-        // Retrieve existing scores from local storage
-        let existingScores = JSON.parse(localStorage.getItem('gameScores')) || [];
-        let newGuesses = JSON.parse(localStorage.getItem('newGesses')) || [];
-    
-        // If there are no existing scores, create an empty array
+        // Retrieve existing scores from local storage or create an empty array
+        let gameScores = JSON.parse(localStorage.getItem('gameScores')) || [];
+        
+        //add 1 because guess starts at index 0 
         guess += 1;
         // Add the new score to the array
-        // newGuesses.push(guess)
-        existingScores.push(guess);
+        gameScores.push(guess);
     
         // Save the updated scores back to local storage
-        // localStorage.setItem("newGuesses", JSON.stringify(newGuesses))
-        localStorage.setItem('gameScores', JSON.stringify(existingScores));
+        //game scores will be removed each time the stats page is updated
+        localStorage.setItem('gameScores', JSON.stringify(gameScores));
+        
+
+        const requestBody = { guess: guess };
+
+// Use JSON.stringify to convert the object to a JSON-formatted string
+        const jsonString = JSON.stringify(requestBody);
+        console.log(jsonString);
+
+        fetch("/api/score", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: jsonString,
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Success:', data);
+                // You can perform additional actions here if needed
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle the error appropriately
+            });
     }
 
     if (guess <= 9) {
