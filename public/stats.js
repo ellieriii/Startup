@@ -1,19 +1,12 @@
 userName = localStorage.getItem("userName");
 document.querySelector("h2").textContent = userName + "'s Score Distribution";
 
-
-
-
 let gameScores = JSON.parse(localStorage.getItem('gameScores')) || [];
-
-
 var scoresCount = JSON.parse(localStorage.getItem('scoresCount')) || {};
 
 
-
-
 flag = localStorage.getItem("updateFlag");
-//flag is set to true when the modal is closed after each game
+//flag is set to true when the modal is closed after each game and when stats page is loaded
 if (flag === "true") {
     updateScores();
     updateStatsUI();
@@ -21,8 +14,7 @@ if (flag === "true") {
 }
 
 
-
-
+// add new scores to the user's existing scores
 function updateScores() {
     for (let score of gameScores) {
             var key = score + "-scores";
@@ -33,8 +25,7 @@ function updateScores() {
 }
 
 
-
-
+// create score bars on stats page
 function updateStatsUI() {
     let maxWidth = 400;
     total = getTotal()
@@ -55,8 +46,6 @@ function updateStatsUI() {
         }
     }
 }
-
-
 
 
 function getTotal () {
