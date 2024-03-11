@@ -11,6 +11,10 @@ main {
     
 }
 
+.trivia {
+    font-family: arial;
+}
+
 main h1 {
     padding: 0.5em;
     font-weight:100;
