@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="play.css" />
 <link rel="stylesheet" href ="page-structure.css"/>
 <link rel="stylesheet" href="board.css" />
+<!-- <link rel="stylesheet" href="path/to/bootstrap.min.css"> -->
 
 
 <head>
@@ -76,7 +77,7 @@
           </ul>
         </li>
         <li><a href="instructions.html">Instructions</a></li>
-        <li><a href="play.html">Play</a></li>
+        <li><a onclick = playerstartedgame() href="play.html">Play</a></li>
         <li><a onclick = "localStorage.setItem('updateFlag', true)" href="stats.html">Stats</a></li>
         
 
@@ -149,7 +150,7 @@
         newCurrent.textContent = userName + " started a new game";
         var playerList = document.getElementById("playerUpdates");
         playerList.appendChild(newCurrent); 
-        savePlayerUpdates()
+        savePlayerUpdates();
     }
 
     function savePlayerUpdates() {
@@ -160,6 +161,7 @@
 
         localStorage.setItem("playerUpdates", JSON.stringify(updates));
     }
+
 
     function loadPlayerUpdates() {
         var playerList = document.getElementById("playerUpdates");
@@ -187,10 +189,9 @@
         var newCurrent = document.createElement("li");
         newCurrent.textContent = userName + " started a new game";
         playerList.appendChild(newCurrent);
-      }
-       
-      loadPlayerUpdates();
     }
+    loadPlayerUpdates();
+  }
 
     
 
@@ -378,20 +379,22 @@
       <div id = "submit"class="submit btn hidden">Submit</div>
       </div>
 
-  
-    <div class="dock">
-      <div class="dock-row">
-        <div class="peg red"></div>
-        <div class="peg green"></div>
-        <div class="peg yellow"></div>
-      </div>
-      <div class = "dock-row">
-        <div class="peg blue" ></div>
-        <div class="peg black" ></div>
-        <div class="peg white"></div>
-      </div>
+    <div class="right">
       
+      <div class="dock">
+        <div class="dock-row">
+          <div class="peg red"></div>
+          <div class="peg green"></div>
+          <div class="peg yellow"></div>
+        </div>
+        <div class = "dock-row">
+          <div class="peg blue" ></div>
+          <div class="peg black" ></div>
+          <div class="peg white"></div>
+        </div>
+      </div>
     </div>
+    
 
     
     
