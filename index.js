@@ -16,10 +16,9 @@ app.use(`/api`, apiRouter);
 
 
 // SubmitScore
-apiRouter.post('/score', (req, res) => {
-  scores = [];
-  scores = updateScores(req.body, scores);
-  res.send(scores);
+apiRouter.post('/scores', (req, res) => {
+  scores = req.body;
+  res.send(scores)
 });
 
 // Return the application's default page if the path is unknown
@@ -32,7 +31,7 @@ app.listen(port, () => {
 });
 
 
-
+scores = [];
 function updateScores(guess, scores) {
   scores.push(guess)
   return scores;

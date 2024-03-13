@@ -280,18 +280,15 @@ $(document).ready(function() {
         // Save the updated scores back to local storage
         //game scores will be removed each time the stats page is updated
         localStorage.setItem('gameScores', JSON.stringify(gameScores));
-        
-
-        const requestBody = { guess: guess };
+        jsonScores = JSON.stringify(gameScores);
+        console.log(jsonScores);
 
 // Use JSON.stringify to convert the object to a JSON-formatted string
-        const jsonString = JSON.stringify(requestBody);
-        console.log(jsonString);
-
-        fetch("/api/score", {
+        
+        fetch("/api/scores", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: jsonString,
+            body: jsonScores,
         })
             .then(response => {
                 if (!response.ok) {
