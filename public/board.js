@@ -280,8 +280,10 @@ $(document).ready(function() {
         // Save the updated scores back to local storage
         //game scores will be removed each time the stats page is updated
         localStorage.setItem('gameScores', JSON.stringify(gameScores));
-        jsonScores = JSON.stringify(gameScores);
-        console.log(jsonScores);
+        const scores = { scores: gameScores };
+
+    // Use JSON.stringify to convert the object to a JSON-formatted string
+        const jsonScores = JSON.stringify(scores);
 
 // Use JSON.stringify to convert the object to a JSON-formatted string
         
@@ -304,7 +306,7 @@ $(document).ready(function() {
                 console.error('Error:', error);
                 // Handle the error appropriately
             });
-    }
+    } 
 
     if (guess <= 9) {
         openModal1();

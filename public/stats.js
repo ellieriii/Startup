@@ -10,7 +10,7 @@ flag = localStorage.getItem("updateFlag");
 if (flag === "true") {
     updateScores();
     updateStatsUI();
-    triviaQuestion();
+    // triviaQuestion();
     localStorage.setItem('updateFlag', false);
 }
 
@@ -59,29 +59,29 @@ function getTotal () {
 }
 
 
-function triviaQuestion() {
-    fetch('https://opentdb.com/api.php?amount=1')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data.results);
-        // const triviaSpot = document.querySelector('#trivia');
+// function triviaQuestion() {
+//     fetch('https://opentdb.com/api.php?amount=1')
+//       .then((response) => response.json())
+//       .then((data) => {
+//         console.log(data.results);
+//         // const triviaSpot = document.querySelector('#trivia');
   
         
-        // triviaSpot.innerHTML = '';
+//         // triviaSpot.innerHTML = '';
   
         
-        // data.results.forEach((questionData) => {
-        //   const question = document.createElement('p');
-        //   question.classList.add('trivia');
-        //   question.textContent = questionData.question;
-        //   triviaSpot.appendChild(question);
-        // });
-      })
-      .catch((error) => {
-        console.error('Error fetching trivia:', error);
-      });
-  }
+//         // data.results.forEach((questionData) => {
+//         //   const question = document.createElement('p');
+//         //   question.classList.add('trivia');
+//         //   question.textContent = questionData.question;
+//         //   triviaSpot.appendChild(question);
+//         // });
+//       })
+//       .catch((error) => {
+//         console.error('Error fetching trivia:', error);
+//       });
+//   }
 
-triviaQuestion();
+// triviaQuestion();
 
 

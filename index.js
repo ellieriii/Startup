@@ -14,12 +14,18 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // SubmitScore
 apiRouter.post('/scores', (req, res) => {
-  scores = req.body;
-  res.send(scores)
+  scores = req.body.scores;
+  res.json({scores})
 });
+
+apiRouter.get('/scores', (req, res) => {
+  
+})
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
